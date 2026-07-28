@@ -4,24 +4,30 @@ const Home = () => {
   return (
     <div id ='home'>
       
-<h1 id='h1'>
+<p className="badge">
+🤖 Scam Detector
+</p>
 
-Placement-Shield
-
+<h1 id="h1">
+Is This Offer Real?
 </h1>
 
+<h2 id="h2">
+
+Detect fake HR messages, suspicious links, unrealistic salaries and scam patterns before you apply.
+</h2>
 <form className='form'>
 
-<h2>Write Company Name </h2>
+
 
 <input id ='companyName' name='CompanyName' type='text'  placeholder='Write Company Name' />
 
-<h2>Paste Placement Message</h2>
-
-<input id ='PlcementMsg' name='PlacementMessage' type='textarea'  placeholder='Paste your message' />
 
 
-<button id='btn'>Analyze Message</button>
+<input id ='PlacementMsg' name='PlacementMessage' type='textarea'  placeholder='Paste your message' />
+
+
+<button id='btn'>Check Now</button>
 
 </form>
 
