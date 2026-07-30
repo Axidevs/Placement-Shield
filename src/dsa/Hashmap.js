@@ -3,6 +3,22 @@
 export default class HashMap {
   constructor() {
     this.map = new Map();
+    export function searchWithHashMap(text, keywordMap) {
+  const matchedKeywords = [];
+
+  const words = text
+    .toLowerCase()
+    .replace(/[^\w\s]/g, "")
+    .split(/\s+/);
+
+  for (const word of words) {
+    if (keywordMap.contains(word)) {
+      matchedKeywords.push(word);
+    }
+  }
+
+  return [...new Set(matchedKeywords)];
+}
   }
 
   // Insert a word or phrase

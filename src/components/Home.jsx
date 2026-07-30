@@ -28,6 +28,10 @@ Detect fake HR messages, suspicious links, unrealistic salaries and scam pattern
 
 
 <button id='btn'>Check Now</button>
+ <p className='para'>Powered by:
+✔ HashMap
+✔ KMP String Matching
+✔ Edit Distance</p>
 
 </form>
 
