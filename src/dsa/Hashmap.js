@@ -1,9 +1,4 @@
-// src/dsa/Hashmap.js
-
-export default class HashMap {
-  constructor() {
-    this.map = new Map();
-    export function searchWithHashMap(text, keywordMap) {
+export function searchWithHashMap(text, keywordMap) {
   const matchedKeywords = [];
 
   const words = text
@@ -19,6 +14,10 @@ export default class HashMap {
 
   return [...new Set(matchedKeywords)];
 }
+
+export default class HashMap {
+  constructor() {
+    this.map = new Map();
   }
 
   // Insert a word or phrase
