@@ -3,34 +3,52 @@ import "./Loading.css";
 
 function Loading(){
 
+return(
 
-return (
+<div className="loading-page">
 
-<div className="loading-screen">
+
+<div className="scanner-circle">
+
+🛡️
+
+</div>
+
 
 <h1>
-Analyzing Offer...
+Scanning Offer...
 </h1>
 
 
+<div className="loading-steps">
+
+
 <p>
-🔍 Scanning suspicious keywords...
+✅ Reading recruitment message
 </p>
 
 
 <p>
-⚡ Running HashMap Detection...
+🔍 Detecting suspicious keywords
 </p>
 
 
 <p>
-🧠 Running KMP Pattern Matching...
+⚡ Running HashMap analysis
 </p>
 
 
 <p>
-📊 Calculating Risk Score...
+🧠 Running KMP pattern matching
 </p>
+
+
+<p>
+📊 Generating risk score
+</p>
+
+
+</div>
 
 
 </div>

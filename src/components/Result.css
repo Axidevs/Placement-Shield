@@ -1,33 +1,194 @@
-.resultBox{
+.result-page{
 
 min-height:100vh;
-padding:40px;
 
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:20px;
+padding:50px;
+
+background:
+linear-gradient(
+135deg,
+#020617,
+#111827
+);
+
+color:white;
 
 }
 
 
-.resultBox h1{
+
+.result-header{
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+
+.result-header h1{
+
+font-size:42px;
+
+}
+
+
+
+.result-grid{
+
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:25px;
+
+
+max-width:1100px;
+
+margin:auto;
+
+
+}
+
+
+
+
+.result-card,
+.algorithm-card,
+.threat-card{
+
+
+background:
+
+rgba(255,255,255,0.08);
+
+
+border-radius:20px;
+
+
+padding:30px;
+
+
+backdrop-filter:blur(15px);
+
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.3);
+
+
+}
+
+
+
+
+
+.score{
+
+
+height:140px;
+
+width:140px;
+
+
+border-radius:50%;
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
 
 font-size:40px;
 
+
+margin:20px auto;
+
+
+border:4px solid #38bdf8;
+
+
 }
 
 
-.resultBox progress{
 
-width:300px;
-height:20px;
+
+.status{
+
+
+padding:12px;
+
+border-radius:15px;
+
+background:#1e293b;
 
 }
 
 
-.resultBox li{
 
-margin:10px;
+
+.algorithm-section{
+
+
+max-width:1100px;
+
+margin:30px auto;
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+
+gap:20px;
+
+
+}
+
+
+
+
+
+.threat-card{
+
+
+max-width:1100px;
+
+margin:30px auto;
+
+}
+
+
+
+
+
+.threat-card p{
+
+
+background:#1e293b;
+
+padding:12px;
+
+border-radius:10px;
+
+
+}
+
+
+
+
+
+@media(max-width:800px){
+
+
+.result-grid,
+.algorithm-section{
+
+grid-template-columns:1fr;
+
+}
+
 
 }

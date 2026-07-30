@@ -1,113 +1,206 @@
 import "./Result.css";
 
 
-function Result({analysis}){
+function Result({analysis}) {
 
 
-return(
+return (
 
-<div className="resultBox">
+<div className="result-page">
 
+
+<div className="result-header">
 
 <h1>
-Analysis Result
+🛡️ Placement Shield Report
 </h1>
 
+<p>
+DSA powered recruitment scam detection
+</p>
+
+</div>
+
+
+
+<div className="result-grid">
+
+
+<div className="result-card risk-card">
+
+<h2>
+Risk Score
+</h2>
+
+
+<div className="score">
+
+{analysis.score}%
+
+</div>
 
 
 <h2
 style={{
-color: analysis.color
+color:analysis.color
 }}
 >
+
 {analysis.level}
+
 </h2>
 
 
-
-<p>
-Risk Score : {analysis.score}
-</p>
-
-
-
-<progress
-value={analysis.score}
-max="100"
-/>
+</div>
 
 
 
 
-<p>
-Company Status :
+<div className="result-card">
 
-<strong>
+
+<h2>
+Company Status
+</h2>
+
+
+<p className="status">
 
 {
 analysis.companyFound
 ?
-" Trusted Company"
+"✅ Trusted Company"
 :
-" Unknown Company"
+"⚠️ Unknown Company"
 }
-
-</strong>
 
 </p>
 
 
 
-
-<h3>
-Matched Keywords
-</h3>
-
-
-<ul>
-
-{
-analysis.keywordMatches.map((word)=>(
-
-<li key={word}>
-{word}
-</li>
-
-))
-
-}
-
-</ul>
-
-
-
-
-<h3>
-Matched Scam Phrases
-</h3>
-
-
-<ul>
-
-{
-analysis.matchedPhrases.map((phrase)=>(
-
-<li key={phrase}>
-{phrase}
-</li>
-
-))
-
-}
-
-</ul>
-
-
+<h2>
+Recommendation
+</h2>
 
 
 <p>
+
 {analysis.recommendation}
+
 </p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div className="algorithm-section">
+
+
+<div className="algorithm-card">
+
+<h2>
+⚡ HashMap
+</h2>
+
+<p>
+Keyword Detection
+</p>
+
+
+<p>
+Matches:
+{analysis.keywordMatches.length}
+</p>
+
+
+</div>
+
+
+
+
+<div className="algorithm-card">
+
+<h2>
+🧠 KMP
+</h2>
+
+<p>
+Phrase Matching
+</p>
+
+
+<p>
+Matches:
+{analysis.matchedPhrases.length}
+</p>
+
+
+</div>
+
+
+<div className="algorithm-card">
+
+<h2>
+📊 Edit Distance
+</h2>
+
+
+<p>
+Similarity Checking
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div className="threat-card">
+
+
+<h2>
+🚨 Detected Threats
+</h2>
+
+
+{
+analysis.keywordMatches.map((item)=>(
+
+<p key={item}>
+⚠️ {item}
+</p>
+
+))
+}
+
+
+
+{
+analysis.matchedPhrases.map((item)=>(
+
+<p key={item}>
+🚨 {item}
+</p>
+
+))
+
+}
+
+
+
+</div>
 
 
 
@@ -115,7 +208,6 @@ analysis.matchedPhrases.map((phrase)=>(
 
 
 )
-
 
 }
 

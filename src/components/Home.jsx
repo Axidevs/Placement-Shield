@@ -103,6 +103,27 @@ const Home = ({ setScreen, setAnalysis }) => {
           Check Now
         </button>
 
+        <div className="powered">
+
+  <div className="powered-title">
+    <span></span>
+    Powered By
+    <span></span>
+  </div>
+
+
+  <div className="tech-badges">
+
+    <span>⚡ HashMap</span>
+
+    <span>🧠 KMP</span>
+
+    <span>📊 Edit Distance</span>
+
+  </div>
+
+</div>
+
 
 
       </form>
