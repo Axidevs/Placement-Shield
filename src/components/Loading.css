@@ -1,0 +1,16 @@
+.loading-screen{
+
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:15px;
+
+}
+
+.loading-screen p{
+
+font-size:18px;
+
+}

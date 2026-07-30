@@ -1,0 +1,33 @@
+.resultBox{
+
+min-height:100vh;
+padding:40px;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:20px;
+
+}
+
+
+.resultBox h1{
+
+font-size:40px;
+
+}
+
+
+.resultBox progress{
+
+width:300px;
+height:20px;
+
+}
+
+
+.resultBox li{
+
+margin:10px;
+
+}
